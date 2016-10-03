@@ -1,0 +1,35 @@
+@import "../variables/**/*";
+@import "../abstractions/**/*";
+
+.btn-toolbar.actionbar {
+  background-color: $_blue;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+
+  @for $i from 1 to 4 {
+    &.items-count-#{$i} {
+      color: red;
+      .btn-group {
+        .btn {
+          width: 100%/$i !important;
+        }
+      }
+    }
+  }
+
+ .btn {
+    border: none;
+    background-color: transparent;
+    height: $actionbar-height;
+
+    &.active {
+      border: none !important;
+    }
+
+    i.fa {
+      color: $_white;
+    }
+  }
+}

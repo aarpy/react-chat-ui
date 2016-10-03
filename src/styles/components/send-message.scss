@@ -1,0 +1,36 @@
+@import "../variables/**/*";
+@import "compass";
+
+.send-new-message {
+  .content-wrapper {
+    padding: 20px;
+
+    .search-box {
+      .input-group {
+        width: 100%;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+    
+    .selectable-friends-view {
+      position: absolute;
+      top: $navbar-height;
+      left: 0;
+      width: 100%;
+      bottom: 90px;
+      padding: 20px;
+      overflow-y: scroll;
+    }
+
+    .list-group {
+      .list-group-item {
+        &:first-child {
+          border-top: 1px solid #ddd;
+        }
+      }
+    }
+  }
+}

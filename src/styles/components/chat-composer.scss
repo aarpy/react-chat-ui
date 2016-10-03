@@ -1,0 +1,30 @@
+@import "../variables/**/*";
+
+.chat-composer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $_white;
+  z-index: 10;
+}
+
+.group-info {
+  .attendants {
+    label {
+      margin-right: 5px;
+      margin-top: 10px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+  }
+
+  .list-group-item {
+    .btn {
+      margin-top: 5px;
+    }
+  }
+}

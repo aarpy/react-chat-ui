@@ -1,0 +1,26 @@
+@import "../variables/**/*";
+@import "compass";
+
+.avatar {
+  &.size-small {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.size-medium {
+    width: 48px;
+    height: 48px;
+  }
+
+  &.size-large {
+    width: 64px;
+    height: 64px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    @include border-radius(50%);
+    border-color: $_white;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../variables/**/*";
+
+.chat-thread {
+  .list-group {
+    position: absolute;
+    top: $navbar-height;
+    left: 0;
+    width: 100%;
+    bottom: $actionbar-height;
+    overflow-y: auto;
+  }
+}

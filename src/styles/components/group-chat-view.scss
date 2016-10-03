@@ -1,0 +1,61 @@
+@import "../variables/**/*";
+@import "compass";
+
+.group-chat-view {
+  @include clearfix;
+
+  .group-chat-list {
+    position: absolute;
+    top: $toolbar-height;
+    bottom: $actionbar-height;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .group-chat-item {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    border: 1px solid $_gray-mid;
+    text-align: center;
+    padding: 20px;
+    border-top: none;
+    cursor: pointer;
+    min-height: 300px;
+    position: relative;
+
+    &:hover {
+      background-color: $_gray-light;
+    }
+
+    &:nth-child(2n) {
+      border-left: none;
+    }
+
+    .attendants {
+      span {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+    }
+
+    .dropdown-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
+.modal {
+  .add-new-group {
+    .group-name {
+      input[type="text"] {
+        width: 100%;
+      }
+      padding: 20px 0;
+    }
+  }
+}

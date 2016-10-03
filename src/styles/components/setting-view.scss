@@ -1,0 +1,13 @@
+@import "../variables/**/*";
+
+.settings-view {
+  .list-group-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .fa {
+    color: $_blue;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}

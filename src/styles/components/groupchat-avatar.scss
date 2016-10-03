@@ -1,0 +1,82 @@
+@import "../variables/**/*";
+@import "compass";
+
+.group-chat-avatar {
+  display: inline-block;
+  @include clearfix;
+  @include border-radius(50%);
+  position: relative;
+
+  .half {
+    width: 50%;
+    float: left;
+  }
+
+  .avatar {
+    img {
+      @include border-radius(0);
+    }
+  }
+
+  $sizes: (
+    small: $avatar-small,
+    medium: $avatar-medium,
+    large: $avatar-large,
+  );
+
+  @each $name, $size in $sizes {
+    &.#{$name} {
+      img {
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+
+  &.items-count-1 {
+    @each $name, $size in $sizes {
+      &.#{$name} {
+        .half-first {
+          width: 100%;
+
+          .avatar {
+            width: 2 * $size;
+            height: 2 * $size;
+          }
+
+          img {
+            width: 2 * $size;
+            height: 2 * $size;
+          }
+        }
+      }
+    }
+  }
+
+  &.items-count-3 {
+    @each $name, $size in $sizes {
+      &.#{$name} {
+        .half-first {
+          img {
+            width: 2 * $size;
+            height: 2 * $size;
+          }
+        }
+      }
+    }
+  }
+
+  &.items-count-2 {
+    @each $name, $size in $sizes {
+      &.#{$name} {
+        width: 2 * $size;
+        height: 2 * $size;
+
+        img {
+          width: 2 * $size;
+          height: 2 * $size;
+        }
+      }
+    }
+  }
+}

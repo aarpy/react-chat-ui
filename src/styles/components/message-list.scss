@@ -1,0 +1,15 @@
+@import "compass";
+
+.message-list {
+  @include clearfix;
+  overflow-y: scroll;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 90px;
+  width: 100%;
+  
+  .with-slideup-view & {
+    bottom: 240px;
+  }
+}

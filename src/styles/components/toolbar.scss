@@ -1,0 +1,22 @@
+@import "../variables/**/*";
+@import "../abstractions/**/*";
+@import "compass";
+
+.btn-toolbar {
+  .btn-group {
+    display: block;
+    width: 100%;
+
+    .btn {
+      width: 25%;
+      height: $toolbar-height;
+
+      &.active {
+        border-bottom: 2px solid $_blue;
+        background-color: transparent;
+        color: $_blue;
+        @include box-shadow(none);
+      }
+    }
+  }
+}

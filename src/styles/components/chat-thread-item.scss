@@ -1,0 +1,28 @@
+.list-group-item {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f6f7f9;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+
+  .media {
+    overflow: visible;
+  }
+
+  .timestamp {
+    margin-right: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .media-message {
+    img {
+      max-width: 32px;
+    }
+  }
+}
+

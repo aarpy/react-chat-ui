@@ -1,0 +1,60 @@
+@import "../variables/**/*";
+@import "compass";
+
+.navbar {
+  height: $navbar-height;
+  margin: 0;
+
+  .title-wrapper {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    cursor: pointer;
+
+    .outer-wrapper {
+      display: table;
+      height: 100%;
+    }
+
+    i {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .inner-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 20px;
+
+      h4 {
+        margin: 0;
+      }
+      span {
+        margin: 0;
+      }
+    }
+  }
+
+  .actions-wrapper {
+    float: right;
+    padding-right: 20px;
+    height: 100%;
+
+    .inner-wrapper {
+      display: table;
+      height: 100%;
+    }
+
+    ul.actions {
+      @include no-bullets;
+      display: table-cell;
+      vertical-align: middle;
+
+      li {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+}

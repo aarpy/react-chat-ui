@@ -1,0 +1,17 @@
+@import "compass";
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-group-item {
+  border-left: none !important;
+  border-right: none !important;
+  @include border-radius(0 !important);
+
+  &:first-child {
+    border-top: none;
+  }
+}

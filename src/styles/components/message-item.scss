@@ -1,0 +1,128 @@
+@import "../variables/**/*";
+@import "compass";
+
+.message-item {
+  padding: 10px 20px;
+  display: table;
+  width: 100%;
+
+  &.type-image, &.type-emoticon {
+    padding: 10px 0;
+
+    .message {
+      .wrapper {
+        padding: 10px 20px;
+        background-color: transparent !important;
+      }
+
+      img {
+        max-width: 240px;
+        @include border-radius(10px);
+      }
+
+      .timestamp {
+        color: #000;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &.type-emoticon {
+    .message {
+      img {
+        max-width: 64px;
+      }
+    }
+  }
+
+  &.type-system {
+    float: none !important;
+    text-align: center;
+    display: block;
+
+    .message {
+      display: inline-block;
+
+      .wrapper {
+        background-color: #777 !important;
+        color: $_white !important;
+        @include border-radius(16px !important);
+        padding: 5px 20px;
+        font-size: 12px;
+
+        p {
+          float: left;
+          margin: 0;
+        }
+
+        .timestamp {
+          position: static;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .avatar {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .message {
+    display: inline-block;
+    vertical-align: middle;
+
+    .wrapper {
+      position: relative;
+      margin: 0;
+      margin-left: 10px;
+      padding: 10px 30px;
+      background-color: #f1f0f0;
+      @include border-top-left-radius(4px);
+      @include border-bottom-left-radius(4px);
+      @include border-top-right-radius(8px);
+      @include border-bottom-right-radius(8px);
+    }
+
+    .timestamp {
+      font-size: 9px;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+    }
+
+    p {
+      a {
+        color: $_blue;
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      max-width: 24px;
+      height: auto;
+    }
+  }
+
+  &.me {
+    .message {
+      float: right;
+      clear: both;
+
+      .wrapper {
+        background-color: $_blue;
+        color: $_white;
+        @include border-top-left-radius(8px);
+        @include border-bottom-left-radius(8px);
+        @include border-top-right-radius(4px);
+        @include border-bottom-right-radius(4px);
+      }
+
+      p {
+        a {
+          color: $_white;
+        }
+      }
+    }
+  }
+}

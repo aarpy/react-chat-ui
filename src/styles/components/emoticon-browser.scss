@@ -1,0 +1,16 @@
+.emoticon-browser {
+  overflow: auto;
+
+  .emoticon {
+    display: inline-block;
+    float: left;
+    height: auto;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    img {
+      max-width: 78px;
+      height: auto;
+    }
+  }
+}
